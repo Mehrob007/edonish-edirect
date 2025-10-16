@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import mobile from "./assets/mobi.png";
 
 export default function App() {
   const platform = navigator.platform;
@@ -15,5 +16,12 @@ export default function App() {
         "https://play.google.com/store/apps/details?id=tj.edonish";
     }
   }, [platform]);
-  return <main>{platform}</main>;
+  return (
+    <main>
+      <div>
+        <img src={mobile} alt={mobile} />
+        <h1>eDonish</h1>
+      </div>
+    </main>
+  );
 }
